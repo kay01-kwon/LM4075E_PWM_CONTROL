@@ -5,11 +5,11 @@
 #include <iostream>
 #include <lm4075e_msgs/Int32.h>
 
-#define Left_Pin_PWM 23
-#define Left_Pin_DIR 30
+#define Left_Pin_PWM 26
+#define Left_Pin_DIR 31
 
-#define Right_Pin_PWM 26
-#define Right_Pin_DIR 31
+#define Right_Pin_PWM 23
+#define Right_Pin_DIR 30
 
 int des_pos_l = 0;
 int des_pos_r = 0;
@@ -39,6 +39,6 @@ int control_input_r = 0;
 int control_dir_l = 0;
 int control_dir_r = 0;
 
-int max_pwm = 700;
+int max_pwm = 1000;
 
 #endif

@@ -56,7 +56,7 @@ lm4075e_control::lm4075e_control()
     encoder_subscriber = nh.subscribe("encoder_data",1,&lm4075e_control::CallbackEncPos,this);
 
     // Get Gain Parameter
-    Kp = 20;
+    Kp = 100;
     Kd = 0.1;
     //nh.getParam("Kp",Kp);
     //nh.getParam("Kd",Kd);
@@ -100,8 +100,8 @@ void lm4075e_control::CallbackEncPos(const Int32 & enc_pos_msg)
 // PID control
 void lm4075e_control::PID_control()
 {
-    pos_error_l = int (des_pos_l - enc_pos_l);
-    pos_error_r = des_pos_r - enc_pos_r;
+    pos_error_l =  int (des_pos_l - enc_pos_l);
+    pos_error_r =  int (des_pos_r - enc_pos_r);
 
     if(isnan(dt) == true)
         dt = 0.01;
@@ -109,11 +109,12 @@ void lm4075e_control::PID_control()
     dpos_error_l = (pos_error_l - pos_prev_error_l)/dt;
     dpos_error_r = (pos_error_r - pos_prev_error_r)/dt;
 
-    control_input_l = Kp*pos_error_l + Kd*dpos_error_l;
-    control_input_r = Kp*pos_error_r + Kd*dpos_error_r;
+    control_input_l = (int) Kp*pos_error_l + Kd*dpos_error_l;
+    control_input_r = (int) Kp*pos_error_r + Kd*dpos_error_r;
     
     std::cout<<"Des Pos: "<<des_pos_l;
     std::cout<<"  Enc Pos: "<<enc_pos_l<<std::endl;
+    std::cout<<"control: "<<control_input_r<<std::endl;
     if(control_input_l > 0)
         control_dir_l = 0;
     else
