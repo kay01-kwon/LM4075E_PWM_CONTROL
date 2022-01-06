@@ -24,3 +24,6 @@ include_directories(
 
 add_executable(main src/main.cpp)
 target_link_libraries(main ${catkin_LIBRARIES} ${WIRINGPI_LIBRARIES})
+
+add_executable(one_actuator_test src/one_lm_test.cpp include/lm4075e_pwm_control/one_lm4075e_test.cpp)
+target_link_libraries(one_actuator_test ${catkin_LIBRARIES} ${WIRINGPI_LIBRARIES})
