@@ -10,4 +10,4 @@ The two topic shares the same message.
 
 Message Field
 
-<img src="lm4075e_pwm_control/picture/Two_actuator_subscribe.png" width="680" height="480" />
+<img src="lm4075e_pwm_control/picture/Two_actuator_subscribe.png" width="680" height="100" />
