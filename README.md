@@ -16,4 +16,4 @@ When you just want to execute one actuator...
 
 Launch Info
 
-<img src="lm4075e_pwm_control/picture/one_lm4075e_pwm_control_launch.png" width="680" height="300" />
+<img src="lm4075e_pwm_control/picture/one_lm4075e_pwm_control_launch.png" width="680" height="280" />
