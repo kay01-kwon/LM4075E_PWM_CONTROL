@@ -18,6 +18,6 @@ When you just want to execute one actuator...
 roslaunch lm4075e_pwm_control one_lm4075e_pwm_control.launch
 ```
 
-Launch Info
+Launch File Info
 
 <img src="lm4075e_pwm_control/picture/one_lm4075e_pwm_control_launch.png" width="680" height="280" />
