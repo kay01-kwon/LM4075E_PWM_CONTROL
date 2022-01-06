@@ -15,7 +15,7 @@ Message Field
 When you just want to execute one actuator...
 
 ```
-roslaunch lm4075e_pwm_control one_lm4075e_pwm_control.laun
+roslaunch lm4075e_pwm_control one_lm4075e_pwm_control.launch
 ```
 
 Launch Info
