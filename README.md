@@ -14,6 +14,12 @@ Message Field
 
 When you just want to execute one actuator...
 
+Encoder launch
+```
+rosrun rosserial_python serial_node.py /dev/ttyACM0 _baud:=115200
+```
+
+Controller launch
 ```
 roslaunch lm4075e_pwm_control one_lm4075e_pwm_control.launch
 ```
